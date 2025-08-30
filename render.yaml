@@ -4,8 +4,6 @@ services:
     env: docker
     plan: starter
     region: singapore
-    buildCommand: docker build -t face-attendance-backend .
-    startCommand: docker run -p $PORT:8000 face-attendance-backend
     envVars:
       - key: S3_BUCKET
         value: mobilefacenet

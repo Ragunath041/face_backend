@@ -13,10 +13,6 @@ RUN apt-get update && apt-get install -y \
     libblas-dev \
     libhdf5-dev \
     libhdf5-serial-dev \
-    libhdf5-103 \
-    libqtgui4 \
-    libqtwebkit4 \
-    libqt4-test \
     python3-dev \
     python3-pip \
     python3-setuptools \
@@ -24,7 +20,6 @@ RUN apt-get update && apt-get install -y \
     python3-cffi \
     libcairo2 \
     libpango-1.0-0 \
-    libgdk-pixbuf2.0-0 \
     libffi-dev \
     shared-mime-info \
     && rm -rf /var/lib/apt/lists/*
