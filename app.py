@@ -15,6 +15,9 @@ from facenet_pytorch import MTCNN
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
+# Get port from environment variable (for App Runner)
+PORT = int(os.getenv("PORT", 5000))
+
 # ---------------------- AWS S3 Setup ---------------------- #
 S3_BUCKET = os.getenv("S3_BUCKET", "mobilefacenet")
 s3 = boto3.client("s3")
@@ -422,4 +425,4 @@ def logout():
 
 # ---------------------- Run ---------------------- #
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=PORT, debug=False)
