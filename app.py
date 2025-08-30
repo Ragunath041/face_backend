@@ -10,6 +10,10 @@ import tensorflow as tf
 from PIL import Image
 from io import BytesIO
 from facenet_pytorch import MTCNN
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # ---------------------- Flask Setup ---------------------- #
 app = Flask(__name__)
