@@ -5,12 +5,12 @@ build:
     build:
       - echo "Installing dependencies..."
       - pip install -r requirements.txt
+      - echo "Build completed successfully"
 run:
-  runtime-version: 3.11
+  runtime-version: 3.9
   command: python app.py
   network:
     port: 5000
-    env: PORT
   env:
     - name: S3_BUCKET
       value: "mobilefacenet"
