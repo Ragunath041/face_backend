@@ -15,8 +15,8 @@ from facenet_pytorch import MTCNN
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-# Get port from environment variable (for App Runner)
-PORT = int(os.getenv("PORT", 5000))
+# Get port from environment variable (for Elastic Beanstalk)
+PORT = int(os.getenv("PORT", 8000))
 
 # ---------------------- AWS S3 Setup ---------------------- #
 S3_BUCKET = os.getenv("S3_BUCKET", "mobilefacenet")

@@ -5,3 +5,4 @@ numpy==1.24.3
 tensorflow==2.13.0
 boto3==1.28.44
 facenet-pytorch==2.5.3
+gunicorn==21.2.0
