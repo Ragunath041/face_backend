@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: face-attendance-backend
+    env: docker
+    plan: starter
+    region: singapore
+    buildCommand: docker build -t face-attendance-backend .
+    startCommand: docker run -p $PORT:8000 face-attendance-backend
+    envVars:
+      - key: S3_BUCKET
+        value: mobilefacenet
+      - key: AWS_DEFAULT_REGION
+        value: ap-south-1
+      - key: FLASK_ENV
+        value: production
+      - key: PYTHONPATH
+        value: /app
+    healthCheckPath: /
+    autoDeploy: true
